@@ -2,9 +2,9 @@
 #define UART_1_H
 
   #include <Arduino.h>
-  
-  #define UART_PORT          Serial
-  #define UART_BAUD          115200
+
+ #define UART_PORT          Serial
+  #define UART_BAUD          9600
   
   #define CHAR_ENDS              '\n'
   #define NUMBERS_BETWEEN         ','

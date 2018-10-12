@@ -6,7 +6,10 @@
 
 Servo direccion;
 #define SERVO_DIRECCION_PIN    3
-#define LED_PIN                5
+#define LED_PIN               13
+
+#define UART_PORT          Serial
+
 void setup() {
   uart_init();
   direccion.attach(SERVO_DIRECCION_PIN);
@@ -27,9 +30,15 @@ void loop() {
           else{
             switch(caracter){
               case CHAR_J1:
-                int intensidad;
-                intensidad = map(Numbers[1],0,1023,0,255);
-                analogWrite(LED_PIN,intensidad);
+                //int intensidad;
+                //intensidad = map(Numbers[1],0,1023,0,255);
+                if(Numbers[0] > 100){
+                  digitalWrite(LED_PIN,HIGH);
+                }
+                else{
+                  digitalWrite(LED_PIN,LOW);
+                }
+                //analogWrite(LED_PIN,intensidad);
                 //Serial.println("La intensidad es "+String(intensidad));
                 //Serial.println("Se recibio en J1 x = "+String(Numbers[0])+", y = "+String(Numbers[1]));
                 break;

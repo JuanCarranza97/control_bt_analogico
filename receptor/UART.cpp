@@ -1,9 +1,10 @@
 #include "UART.h"
 
 char last_char = CHAR_ENDS; 
-
+ 
 void uart_init(void){
   UART_PORT.begin(UART_BAUD);  
+ 
 }
 
 bool uart_get(char *caracter_salida,int *size_,int _datos[]){
