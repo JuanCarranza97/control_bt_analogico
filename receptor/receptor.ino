@@ -57,6 +57,18 @@ void loop() {
           }          
         }  
       }
-      
-
 }
+
+void parpadear(int x){
+  digitalWrite(LED_PIN,LOW);
+  delay(250);
+  for(int i=0;i<x;i++){
+    digitalWrite(LED_PIN,HIGH);
+    delay(100);
+    digitalWrite(LED_PIN,LOW);
+    delay(100);
+  }
+  digitalWrite(LED_PIN,LOW);
+  delay(250);
+}
+

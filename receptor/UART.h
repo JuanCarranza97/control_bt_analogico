@@ -4,7 +4,7 @@
   #include <Arduino.h>
 
  #define UART_PORT          Serial
-  #define UART_BAUD          9600
+  #define UART_BAUD         115200
   
   #define CHAR_ENDS              '\n'
   #define NUMBERS_BETWEEN         ','
